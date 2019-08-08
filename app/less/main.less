@@ -6,12 +6,13 @@
 
   .about {
     max-width: 1170px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 103px;
   
     &__left {
-      margin-right: 111px;
+      width: 50%;
   
       .about-logo {
         margin-top: 16px;
@@ -46,6 +47,7 @@
     }
   
     &__right {
+      max-width: 500px;
       display: flex;
       flex-direction: column;
   
@@ -65,7 +67,7 @@
         }
   
         &__description {
-          max-width: 480px;
+          // max-width: 480px;
           color: @main-font-color;
           font-family: @main-font;
           font-size: 15px;
