@@ -1,0 +1,135 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image:
+    url(../img/geometry-min.png),
+    linear-gradient(to right, #000335, #042571);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 32px;
+
+  .wrapper {
+    max-width: 1170px;
+    width: 100%;
+    background-image: url(../img/hand-min.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logos {
+    display: flex;
+
+    .logo {
+
+      &:first-child {
+        margin-right: 30px;
+      }
+
+      &:last-child {
+        margin-right: 70px;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    font-family: @main-font;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-right: 63px;
+
+    &__item {
+      position: relative;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 26px;
+    }
+
+    &__link {
+      position: relative;
+      color: @second-font-color;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 2px;
+        top: 30px;
+        left: 50%;
+        background-color: @fourth-color;
+        transform: translateX(-50%);
+        transition: width .3s ease-in-out;
+      }
+
+      &:hover:after,
+      &:focus:after {
+        width: 20px;
+      }
+    }
+  }
+
+  .lang {
+    display: flex;
+    align-items: center;
+    font-family: @main-font;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+
+    &__item:not(:last-child) {
+      margin-right: 17px;
+    }
+
+    &__link {
+      position: relative;
+      color: @second-font-color;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: @fourth-color;
+      }
+    }
+  }
+
+  .department {
+    display: flex;
+    flex-direction: column;
+    margin-top: 153px;
+    margin-bottom: 252px;
+
+    &__title {
+      font-family: @main-font;
+      color: @fifth-color;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 36px;
+      margin-bottom: 50px;
+
+      &_upper {
+        text-transform: uppercase;
+      }
+    }
+
+    &__description {
+      max-width: 559px;
+      color: @second-font-color;
+      font-family: @second-font;
+      font-size: 52px;
+      line-height: 64px;
+      letter-spacing: normal;
+    }
+  }
+}

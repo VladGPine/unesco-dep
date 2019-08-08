@@ -1,0 +1,16 @@
+header.header
+  .wrapper
+    .header__wrapper
+      .header__logos
+        .logo: img(class='logo__image' src='img/main_logo_eng-min.png')
+        .logo: img(class='logo__image' src='img/second_logo-min.png')
+      ul.nav
+        each val in ['Главная', 'О кафедре', 'Направления деятельности', 'Партнеры', 'Руководство', 'Контакты']
+          li.nav__item: a(class='nav__link' href='#')= val
+      ul.lang
+        each item in ['ru', 'en']
+          li.lang__item: a(class='lang__link' href='#')= item
+    .department
+      h3.department__title Кафедра 
+        span.department__title_upper юнеско
+      h1.department__description Социально-правовые и этические основы общества знаний
