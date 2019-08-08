@@ -64,7 +64,7 @@ const watch = done => {
 const deploy = done => {
   gulp.src('./dist/**/*')
     .pipe(ghPages({
-      remoteUrl: 'https://github.com/VladGPine/unesco_dep',
+      remoteUrl: 'https://github.com/VladGPine/unesco-dep',
       branch: 'gh-pages'
     }))
   done()
