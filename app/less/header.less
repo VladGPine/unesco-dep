@@ -34,12 +34,20 @@
       background-position: 130% -50%;
       background-size: 110%;
     }
+
+    @media (max-width: 480px) {
+      background-image: none;
+    } 
   }
 
   &__wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 480px) {
+      justify-content: space-around;
+    } 
   }
 
   &__logos {
@@ -54,6 +62,10 @@
 
       &:first-child {
         margin-right: 30px;
+
+        @media (max-width: 350px) {
+          margin-right: 5px;
+        }
       }
 
       &:last-child {
@@ -193,6 +205,10 @@
       order: 3;
     }
 
+    @media (max-width: 480px) {
+      display: none;
+    } 
+
     &__item:not(:last-child) {
       margin-right: 17px;
     }
@@ -244,6 +260,10 @@
       @mobile {
         margin-bottom: 170px;
       }
+
+      @media (max-width: 480px) {
+        margin-bottom: 26px;
+      } 
 
       &_upper {
         text-transform: uppercase;
