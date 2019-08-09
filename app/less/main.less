@@ -5,21 +5,72 @@
   align-items: center;
 
   .about {
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 103px;
+    padding: 0 14px;
+
+    @media @tablet-l {
+      justify-content: center;
+      padding: 0 40px;
+      margin-top: 50px;
+    }
+
+    @media @mobile {
+      margin-top: 38px;
+    }
   
     &__left {
       width: 50%;
+
+      @media @tablet-l,
+      @tablet-s,
+      @mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @media @tablet-l {
+        width: 80%;
+        
+      }
+
+      @media @tablet-s,
+      @mobile {
+        width: 100%;
+      }
   
       .about-logo {
         margin-top: 16px;
+
+        @media @tablet-l {
+          margin-top: 0;
+        }
+
+        @media @tablet-s,
+        @mobile {
+          width: 80%;
+        }
       }
   
       .about-news {
         margin-top: 145px;
+
+        @media @tablet-l,
+        @tablet-s,
+        @mobile {
+          margin-top: 70px;
+          margin-bottom: 70px;
+        }
+
+        @media @tablet-s,
+        @mobile {
+          width: 100%;
+        }
   
         &__title {
           color: @third-font-color;
@@ -27,6 +78,17 @@
           font-size: 42px;
           line-height: 56px;
           margin-bottom: 57px;
+
+          @media @tablet-l {
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 29px;
+          }
+
+          @media @tablet-s,
+          @mobile {
+            text-align: center;
+          }
         }
 
         /* Twitter styles start */
@@ -50,9 +112,29 @@
       max-width: 500px;
       display: flex;
       flex-direction: column;
+
+      @media @tablet-l,
+      @tablet-s,
+      @mobile {
+        display: flex;
+        margin: 0 auto;
+      }
+
+      @media @tablet-l {
+        width: 80%;
+        
+      }
+
+      @media @tablet-s {
+        width: 100%;
+      }
   
       .about-department {
         margin-bottom: 107px;
+
+        @media @tablet-l {
+          margin-bottom: 50px;
+        }
   
         &__title {
           color: @third-font-color;
@@ -60,6 +142,13 @@
           font-size: 42px;
           line-height: 56px;
           margin-bottom: 44px;
+
+          @media @tablet-s,
+          @mobile {
+            font-size: 36px;
+            line-height: 44px;
+            text-align: center;
+          }
   
           &_upper {
             text-transform: uppercase;
@@ -73,6 +162,10 @@
           font-size: 15px;
           line-height: 25px;
           margin-bottom: 55px;
+
+          @media @tablet-l {
+            margin-bottom: 22px;
+          }
         }
   
         &__link {
@@ -88,9 +181,18 @@
   
       .about-images {
         margin-bottom: 114px;
+
+        @media @tablet-l {
+          margin-bottom: 50px;
+        }
   
         &__image {
           background-color: @first-bg-color;
+
+          @media @tablet-s,
+          @mobile {
+            width: 100%;
+          }
   
           &:first-child {
             margin-bottom: 29px;
@@ -101,15 +203,18 @@
   }
 
   .work {
-    max-width: 1240px;
+    max-width: 1170px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: @second-font-color;
-    background-image: url(../img/bg2-min.png);
+    background-image: url(../img/bg2-1-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media @tablet-l {
+    }
 
     &__title {
       font-family: @second-font;
@@ -117,6 +222,17 @@
       line-height: 56px;
       margin-top: 99px;
       margin-bottom: 120px;
+
+      @media @tablet-l,
+      @tablet-s {
+        margin-top: 50px;
+        margin-bottom: 80px;
+      }
+
+      @media @tablet-l {
+        font-size: 32px;
+        line-height: 29px;
+      }
     }
 
     &-list {
@@ -130,7 +246,20 @@
       line-height: 24px;
       letter-spacing: 2.1px;
       text-transform: uppercase;
+      padding: 0 28px;
       margin-bottom: 144px;
+
+      @media @tablet-l,
+      @tablet-s {
+        padding: 0 40px;
+        margin-bottom: 70px;
+      }
+
+      @media @tablet-s,
+      @mobile {
+        flex-direction: column;
+        align-items: center;
+      }
 
       &__item {
         max-width: 150px;
@@ -139,7 +268,13 @@
         align-items: center;
         text-align: center;
 
+        @media @tablet-s,
+        @mobile {
+          margin-bottom: 90px;
+        }
+
         &:first-child {
+
           .work-list__sprite {
 
             .stitches-sprite(-72px, -10px, 40px, 39px);
@@ -147,13 +282,22 @@
         }
 
         &:nth-child(2) {
+
           .work-list__sprite {
+
             .stitches-sprite(-10px, -10px, 42px, 42px);
           }
         }
 
         &:last-child {
+
+          @media @tablet-s,
+          @mobile {
+            margin-bottom: 0;
+          }
+
           .work-list__sprite {
+
             .stitches-sprite(-132px, -10px, 30px, 42px);
 
             &::before {

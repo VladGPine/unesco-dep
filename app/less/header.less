@@ -10,11 +10,30 @@
   padding-top: 32px;
 
   .wrapper {
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     background-image: url(../img/hand-min.png);
     background-repeat: no-repeat;
     background-position: 50% 0;
+    padding: 0 14px;
+
+    @media @tablet-l,
+    @tablet-s {
+      padding: 0 40px;
+    }
+
+    @media @tablet-l {
+      background-size: cover;
+    }
+
+    @media @tablet-s {
+      background-size: 140%;
+    }
+
+    @media @tablet-s, @mobile {
+      background-position: 130% -50%;
+      background-size: 110%;
+    }
   }
 
   &__wrapper {
@@ -26,6 +45,11 @@
   &__logos {
     display: flex;
 
+    @media @tablet-s,
+    @mobile {
+      order: 2;
+    }
+
     .logo {
 
       &:first-child {
@@ -34,6 +58,11 @@
 
       &:last-child {
         margin-right: 70px;
+
+        @media  @tablet-s,
+        @mobile {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -50,12 +79,36 @@
     line-height: 20px;
     margin-right: 63px;
 
+    @media @tablet-s,
+    @mobile {
+      position: absolute;
+      width: 100%;
+      top: 120px;
+      left: 0;
+      flex-direction: column;
+      font-size: 18px;
+      background-color: @second-font-color;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-in-out;
+      z-index: 999;
+    }
+
     &__item {
       position: relative;
+
+      @media @tablet-s,
+      @mobile {
+        padding: 30px 0;
+      }
     }
 
     &__item:not(:last-child) {
       margin-right: 18px;
+
+      @media @tablet-s,
+      @mobile {
+        margin-right: 0;
+      }
     }
 
     &__link {
@@ -63,6 +116,11 @@
       color: @second-font-color;
       text-decoration: none;
       white-space: nowrap;
+
+      @media @tablet-s,
+      @mobile {
+        color: @third-font-color;
+      }
 
       &::after {
         position: absolute;
@@ -83,6 +141,45 @@
     }
   }
 
+  .burger-wrapper {
+    display: none;
+    width: 25px;
+    height: 15px;
+    align-self: center;
+    cursor: pointer;
+  
+    @media @tablet-s,
+    @mobile {
+      display: block;
+      order: 1;
+    }
+  }
+
+  .burger {
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background-color: @second-font-color;
+  
+    &::before {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 3px;
+      top: 12px;
+      background-color: @second-font-color;
+    }
+  
+    &::after {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 3px;
+      top: 6px;
+      background-color: @second-font-color;
+    }  
+  }
+
   .lang {
     display: flex;
     align-items: center;
@@ -90,6 +187,11 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
+
+    @media @tablet-s,
+    @mobile {
+      order: 3;
+    }
 
     &__item:not(:last-child) {
       margin-right: 17px;
@@ -112,6 +214,18 @@
     flex-direction: column;
     margin-top: 153px;
     margin-bottom: 252px;
+    
+    @media @tablet-l,
+    @tablet-s,
+    @mobile {
+      margin-top: 70px;
+      margin-bottom: 100px;
+    }
+
+    @media @tablet-s,
+    @mobile {
+      align-items: center;
+    }
 
     &__title {
       font-family: @main-font;
@@ -120,6 +234,16 @@
       font-weight: 600;
       line-height: 36px;
       margin-bottom: 50px;
+
+      @media @tablet-l,
+      @tablet-s {
+        margin-bottom: 26px;
+      }
+
+      @media @tablet-s,
+      @mobile {
+        margin-bottom: 170px;
+      }
 
       &_upper {
         text-transform: uppercase;
@@ -133,6 +257,28 @@
       font-size: 52px;
       line-height: 64px;
       letter-spacing: normal;
+
+      @media @tablet-l,
+      @tablet-s {
+        max-width: 420px;
+        font-size: 32px;
+        line-height: 44px;
+      }
+
+      @media  @tablet-s {
+        text-align: center;
+      }
+
+      @media @mobile {
+        max-width: 70%;
+        font-size: 28px;
+        line-height: 38px;
+        text-align: center;
+      }
     }
+  }
+
+  .nav-active {
+    transform: translateX(0%);
   }
 }

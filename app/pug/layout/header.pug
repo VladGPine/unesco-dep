@@ -7,6 +7,8 @@ header.header
       ul.nav
         each val in ['Главная', 'О кафедре', 'Направления деятельности', 'Партнеры', 'Руководство', 'Контакты']
           li.nav__item: a(class='nav__link' href='#')= val
+      .burger-wrapper
+        .burger
       ul.lang
         each item in ['ru', 'en']
           li.lang__item: a(class='lang__link' href='#')= item
