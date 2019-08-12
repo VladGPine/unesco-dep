@@ -1,0 +1,26 @@
+main.main-headship
+  - 
+    var headshipList = [
+      {
+        name: 'Иван Васильевич Лобанов',
+        position: 'Ректор ГУУ',
+        imgUrl: 'img/photo1-min.jpg'
+      },
+      {
+        name: 'Малкарова Светлана Магометовна',
+        position: 'Проректор',
+        imgUrl: 'img/photo2-min.jpg'
+      },
+      {
+        name: 'Адаскина Александра',
+        position: 'Проректор',
+        imgUrl: 'img/photo2-min.jpg'
+      }
+    ]
+
+  ul.list
+    each person in headshipList
+      li.person
+        img(class='person__image' src=person.imgUrl)
+        p.person__name= person.name
+        p.person__position= person.position
