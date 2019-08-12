@@ -1,6 +1,38 @@
+-
+  var goalsList = [
+    {title: 'Стратегическая цель №2', description: 'blabla'}, 
+    {title: 'Стратегическая цель №4', description: 'blabla'}, 
+    {title: 'Стратегическая цель №9', description: 'blabla'}
+  ]
+
 main.main-about
-  section.main-about__left
-    h3 Государственные Университет Управления
-    h2 Кафедра
-      span.upper Юнеско
-  section.main-about__right
+  section.main-about__description
+    section.main-about__left
+      h4 Государственные Университет Управления
+      h2 Кафедра
+        span.upper Юнеско
+        | 
+      .activity
+        .activity-block
+          h3.activity-block__title Деятельность
+          p.activity-block__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos animi omnis laudantium nesciunt esse dicta cum debitis aliquid impedit? Enim autem architecto animi nemo accusamus molestiae sed nam laborum, quasi ducimus explicabo et sint sapiente a provident iusto consequuntur aliquam magnam facere odit voluptatem dignissimos quibusdam ullam. Dicta assumenda, unde rerum aut dolorem eaque sit a illo sed vel velit.
+        .activity-block
+          h3.activity-block__title Цифровое волонтрство
+          p.activity-block__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusamus ipsum quod repudiandae. Ullam reiciendis eveniet quaerat minus doloremque! Sequi repudiandae temporibus rem deserunt quos voluptatem molestiae explicabo dolor consequatur iure? Repudiandae eligendi velit corrupti eius dolore qui dicta labore accusantium vitae nihil? Earum maiores quisquam assumenda alias, cum molestiae iste asperiores! Fuga vitae corporis placeat cum, doloribus praesentium laborum!
+    section.main-about__right
+      .formation
+        h3.formation__title
+        p.formation__description
+          ul.formation-goals
+            each val in goalsList
+              li.goal
+                h4(class='goal__title')= val.title
+                p(class='goal__description')= val.description
+      .partner-universities
+        h3.partner-universities__title Вузы-партнеры
+        p.partner-universities__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sint accusamus magni, numquam culpa adipisci placeat dicta et aliquid deserunt illum dolores veritatis eveniet laudantium illo nisi aspernatur necessitatibus blanditiis fuga recusandae doloribus. Quam totam adipisci natus nobis ad hic alias omnis vitae illum vero sint pariatur consectetur culpa dolores minima aliquam nihil possimus commodi, ab aspernatur cumque esse inventore.
+  section.docs
+    h3.docs__title Уставные документы
+    a(class='docs__download' href='#' download='#') Скачать pdf
+    // ul.docs-list
+      
