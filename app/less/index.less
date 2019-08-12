@@ -22,19 +22,26 @@ ul {
   list-style: none;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   width: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // font-family: @main-font;
 }
 
 @import 'header.less';
 // @import 'menu.less';
 // @import 'callback.less';
+@import 'header-about.less';
 @import 'department.less';
 @import 'main.less';
+@import 'main-about.less';
 // @import 'services.less';
 // @import 'benefits.less';
 // @import 'partners.less';
