@@ -1,12 +1,95 @@
 .main-about {
+  max-width: 1170px;
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
 
   &__description {
     display: flex;
+    margin-bottom: 100px;
+
+    .university {
+      color: @third-font-color;
+      padding-top: 50px;
+  
+      &__name {
+        margin-bottom: 50px;
+      }
+      
+      &__description {
+        margin-bottom: 80px;
+      }
+  
+      .activity {
+        background-image:
+          url(../img/geometry-min.png),
+          linear-gradient(to right, #000335, #042571);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 30px;
+  
+        &-block {
+          padding: 50px;
+  
+          &__title {
+            color: @second-font-color;
+            margin-bottom: 30px;
+          }
+  
+          &__description {
+            color: @fifth-color;
+          }
+        }
+      }
+    }
+
+    .history {
+    
+
+      .formation {
+        box-shadow: 0 0 15px 1px lightgrey;
+        padding: 50px;
+  
+        &__title {
+          margin-bottom: 30px;
+        }
+  
+        &__description {
+          margin-bottom: 30px;
+        }
+  
+        &-goals {
+  
+          .goal {
+  
+            &__title {
+  
+            }
+  
+            &__description {
+            
+            }
+          }
+        }
+      }
+  
+      .partner-universities {
+        padding: 50px;
+  
+        &__title {
+          margin-bottom: 30px;
+        }
+      }
+    }
   }
 
   .docs {
+    display: flex;
 
+    &-block {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
