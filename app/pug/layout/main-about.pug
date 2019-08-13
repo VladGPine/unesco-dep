@@ -1,28 +1,63 @@
 -
   var goalsList = [
-    {title: 'Стратегическая цель №2', description: 'blabla'}, 
-    {title: 'Стратегическая цель №4', description: 'blabla'}, 
-    {title: 'Стратегическая цель №9', description: 'blabla'}
+    {
+      title: 'Стратегическая цель №2', 
+      description: 'Расширение прав и возможностей учащихся с целью воспитания творческой и ответственной глобальной гражданственности.'}, 
+    {
+      title: 'Стратегическая цель №4', 
+      description: 'Укрепление систем и политики в области науки, технологии и инноваций на национальном, региональном и глобальном.уровнях'
+    }, 
+    {
+      title: 'Стратегическая цель №9', 
+      description: 'Содействие развитию свободы выражения мнений, средств информации и всеобщего доступа к информации и знаниям.'
+    }
+  ]
+
+  var docsList = [
+    'img/doc1-min.jpg',
+    'img/doc2-min.jpg',
+    'img/doc3-min.jpg',
+    'img/doc4-min.jpg',
+    'img/doc5-min.jpg'
   ]
 
 main.main-about
   section.main-about__description
-    article.university
-      h4.university__name Государственные Университет Управления
+    section.university
+      h4.university__name Государственные университет управления
       h2.university__dep Кафедра
-        span.upper Юнеско
+        span.university__dep_upper  Юнеско
       p.university__description "Социально-правовые и этические основы общества знаний (информационного общества)"
-      .activity
+      article.activity
         .activity-block
           h3.activity-block__title Деятельность
-          p.activity-block__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos animi omnis laudantium nesciunt esse dicta cum debitis aliquid impedit? Enim autem architecto animi nemo accusamus molestiae sed nam laborum, quasi ducimus explicabo et sint sapiente a provident iusto consequuntur aliquam magnam facere odit voluptatem dignissimos quibusdam ullam. Dicta assumenda, unde rerum aut dolorem eaque sit a illo sed vel velit.
+          p.activity-block__description 
+            span.activity-block__description_white Кафедра начала свою деятельность с участия
+              | во II Международном научном форуме «Шаг в будущее: искусственный интеллект и цифровая экономика»,  
+            | который прошел в ГУУв декабре 2018 года при поддержке Министерства науки и высшего образования,
+            | под эгидой Комиссии РФ по делам ЮНЕСКО и в партнерстве с Ассоциаций бизнес-школ стран БРИКС.
+            | В рамках Форума кафедра ЮНЕСКО совместно с информационным агентством ТАСС провела
+            | международную сессию «Социально-этические вызовы эпохи цифровизации» и международный круглый 
+            | стол «Преодоление цифрового неравенства: перспективы развития цифрового волонтерства».
         .activity-block
           h3.activity-block__title Цифровое волонтрство
-          p.activity-block__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusamus ipsum quod repudiandae. Ullam reiciendis eveniet quaerat minus doloremque! Sequi repudiandae temporibus rem deserunt quos voluptatem molestiae explicabo dolor consequatur iure? Repudiandae eligendi velit corrupti eius dolore qui dicta labore accusantium vitae nihil? Earum maiores quisquam assumenda alias, cum molestiae iste asperiores! Fuga vitae corporis placeat cum, doloribus praesentium laborum!
+          p.activity-block__description В ноябре 2018 года было заложено одно из ключевых направлений    
+            | деятельности кафедры – развитие цифрового волонтерства. Добровольцы будут работать над решением проблем
+            | цифрового неравенства, доступа к информации, медиаобразования, распространения позитивного контента.
+            | Проект по созданию Международный центра развития цифрового волонтерства предполагает создание единой
+            | площадки, объединяющей деятельность волонтеров, некоммерческих организаций, реализующих проекты и
+            | осуществляющих свою добровольческую деятельность в сети Интернет. Платформа будет помогать в обучении,
+            | проведению исследований, обмене опытом, поиску добровольцев и предложению услуг НКО, гражданских 
+            | активистов, волонтеров в области общественной работы в Интернете, и в социальных медиа, в частности.
     section.history
       article.formation
         h3.formation__title Создание кафедры
-        p.formation__description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi voluptatum ex iste dicta quia nobis fugiat, deleniti dolores non autem vitae! Quae, officia autem praesentium necessitatibus commodi laborum harum assumenda corporis hic libero rerum quaerat voluptate magni, esse inventore, eius porro. Dolores, aperiam error ratione ipsam quos exercitationem illo qui. Inventore deleniti, amet nulla tenetur a expedita perspiciatis beatae.
+        p.formation__description В ноябре 2018 года Секретариат ЮНЕСКО одобрил инициативу ГУУ о создании кафедры ЮНЕСКО
+          | «Социально-правые и этические основы общества знаний (информационного общества)», а 25 января 2019 года 
+          | подписано официальное соглашение между ЮНЕСКО и ГУУ.
+          | Кафедра ЮНЕСКО под руководством ректора ГУУ Ивана Лобанова поможет студентам и преподавателям участвовать
+          | в образовательных, научных и культурных программах, привлекать экспертное сообщество в университет в соответствии
+          | с целями Среднесрочной стратегии ЮНЕСКО на 2014-2021 годы:
           ul.formation-goals
             each val in goalsList
               li.goal
@@ -30,12 +65,21 @@ main.main-about
                 p(class='goal__description')= val.description
       article.partner-universities
         h3.partner-universities__title Вузы-партнеры
-        p.partner-universities__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sint accusamus magni, numquam culpa adipisci placeat dicta et aliquid deserunt illum dolores veritatis eveniet laudantium illo nisi aspernatur necessitatibus blanditiis fuga recusandae doloribus. Quam totam adipisci natus nobis ad hic alias omnis vitae illum vero sint pariatur consectetur culpa dolores minima aliquam nihil possimus commodi, ab aspernatur cumque esse inventore.
+        p.partner-universities__description В эти же дни было подписано четырехстороннее соглашение между ГУУ (Россия),     
+          | Университетом Нинбо (КНР), Папским католическим университетом (Бразилия) и Ксавьерским институтом менеджмента 
+          | и предпринимательства (Индия). Вузы-партнеры будут проводить совместные проекты по подготовке кадров и повышению 
+          | их квалификации, внедрению новых технологий и научных разработок, организации международных научно-практических 
+          | форумов и конференций в рамках работы кафедры ЮНЕСКО «Социально-правовые и этические основы общества знаний».
         br
-        p.partner-universities__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam possimus ex unde deleniti aperiam mollitia quidem dolorum sapiente eveniet animi rem rerum suscipit consequuntur repellat, dolorem autem molestiae magnam sit.
+        p.partner-universities__description 
+          strong.partner-universities__description_strong Кафедра ЮНЕСКО «Социально-правовые и этические основы общества знаний (информационного общества)»  
+          | – постоянный участник международных конференций, симпозиумов, конгрессов, активный член профессионального сообщества.
   section.docs
     .docs-block
       h3.docs-block__title Уставные документы
       a(class='docs-block__download' href='#' download='#') Скачать pdf
-    // ul.docs-list
+    ul.docs-list
+      each val in docsList
+        li.doc
+          img(class='doc__img' src=val)
       
