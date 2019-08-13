@@ -1,0 +1,129 @@
+main.main-contacts
+  - 
+    var address = [
+      {
+        title: 'Адрес:',
+        description: '109542, Москва, Рязанский проспект, 99.'
+      },
+      {
+        title: 'Проезд:',
+        description: ' станция метро “Выхино”'
+      },
+      {
+        title: 'Электронная почта:',
+        description: 'inf@guu.ru'
+      },
+      {
+        title: 'Телефон/факс:',
+        description: '+7 (495) 377-89-14'
+      },
+      {
+        title: 'Телефон для справок:',
+        description: '+7 (495) 377-89-14'
+      }
+    ]
+
+    var phones = [
+      {
+        title: 'Приемная комиссия:',
+        tel1: '+7 (495) 371-57-66',
+        description1: 'очная и очно-заочная (вечерняя) формы обучения',
+        tel2: '+7 (495) 371-57-66',
+        description2: 'заочная форма обучения'
+      },
+      {
+        title: 'Дополнительное образование:',
+        tel: '+7 (495) 377 80 50'
+      },
+      {
+        title: 'Институт открытого образования (заочная форма):',
+        tel: '+7 (495)377-78-11'
+      },
+      {
+        title: 'Аспирантура и докторантура:',
+        tel: '+7 (495) 371-69-33'
+      },
+      {
+        title: 'Высшая школа бизнеса:',
+        tel: '+7 (495)371-32-55; +7 (495) 510-65-85'
+      },
+      {
+        title: 'Факультет довузовской подготовки:',
+        tel: '+7 (495)589-13-59; +7(495) 371-82-55'
+      }
+    ]
+
+    var bank = [
+      'ГУ Банка России по ЦФО',
+      'БИК  044525000',
+      'р/сч 40501810845252000079'
+    ]
+
+    var addressee = [
+      'УФК по г. Москве (ГУУ, л/с 20736У93870)',
+      'ИНН 7721037218   КПП 772101001',
+      'КБК 00000000000000000130',
+      'ОКОНХ 92110',
+      'ОКТМО  45385000000',
+      'ОКПО 02066598'
+    ]
+
+    var examples = [
+      'Образец заполнения платежного поручения для оплаты обучения',
+      'Образец заполнения платежного поручения для оплаты коммунальных услуг',
+      'Образец заполнения платежного поручения для оплаты за проживание в общежитии'      
+    ]
+    
+  ul.lists
+
+    li.lists-item
+      h2.lists-item__title Государственный Университет Управления
+      ul.inside-list
+        each val, index in address
+          li.inside-list__item
+            h3.inside-list__title= val.title
+            if index == 2
+              a(class='inside-list__link' href='#')= val.description
+            else
+              p.inside-list__description= val.description
+
+    li.lists-item
+      h2.lists-item__title Телефоны
+      ul.inside-list
+        each val, index in phones
+          if !index == 0
+            li.inside-list__item
+              h3.inside-list__title= val.title
+              p.inside-list__description= val.tel
+          else
+            li.inside-list__item
+              h3.inside-list__title= val.title
+              p.inside-list__description= val.tel1
+              p.inside-list__description= val.description1
+              p.inside-list__description= val.tel2
+              p.inside-list__description= val.description2
+
+    li.lists-item
+      h2.lists-item__title Банковские реквизиты
+      ul.inside-list
+
+        li.inside-list__item
+          h3.inside-list__title Банк получателя
+          ul.double-inside-list
+            each val in bank
+              li.double-inside-list__item
+                p.inside-list__description= val
+        
+        li.inside-list__item
+          h3.inside-list__title Получатель
+          ul.double-inside-list
+            each val in addressee
+              li.double-inside-list__item
+                p.inside-list__description= val
+        
+        li.inside-list__item
+          h3.inside-list__title Назначение платежа
+          ul.double-inside-list
+            each val in examples
+              li.double-inside-list__item
+                a(class='inside-list__link' href='#')= val

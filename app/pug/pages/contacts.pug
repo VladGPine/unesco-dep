@@ -1,0 +1,20 @@
+doctype html
+html(lang="ru-RU")
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Unesco Department
+    link(rel='stylesheet', href='css/styles.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap&subset=cyrillic')
+  body
+    include ../layout/header-contacts
+    .map
+      script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8ab1a22bab60acc47bd133008443aa2280ad8e33c7ef2d15fcb19487fb175d0c&amp;width=auto&amp;height=555&amp;lang=ru_RU&amp;scroll=true")
+    include ../layout/main-contacts
+    include ../layout/footer
+    script(type='text/javascript' src='js/index.js')
+    
+    
+    
