@@ -230,3 +230,20 @@
     transform: translateX(0%);
   }
 }
+
+.selected {
+  position: relative;
+  width: 0;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 2px;
+    top: 30px;
+    left: 50%;
+    background-color: @fourth-color;
+    transform: translateX(-50%);
+    transition: width .3s ease-in-out;
+  }
+}
