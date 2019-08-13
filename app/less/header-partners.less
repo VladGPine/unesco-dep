@@ -1,0 +1,34 @@
+.header-partners {
+  background-image:
+    url(../img/geometry2-min.png),
+    linear-gradient(to right, #000335, #042571);
+  background-size: cover;
+
+  .wrapper {
+    background-image: none;
+  }
+
+  &__title {
+    color: @second-font-color;
+    font-family: @second-font;
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: normal;
+    text-align: center;
+    margin-top: 66px;
+    margin-bottom: 127px;
+
+    @media @tablet-l,
+    @tablet-s {
+      font-size: 32px;
+      line-height: 44px;
+    }
+
+    @media @mobile {
+      font-size: 28px;
+      line-height: 38px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+}

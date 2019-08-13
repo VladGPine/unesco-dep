@@ -1,0 +1,100 @@
+.main-partners {
+  max-width: 1170px;
+  display: flex;
+  margin-top: 89px;
+
+  @media @tablet-l,
+    @tablet-s,
+    @mobile {
+      margin-top: 40px;
+    }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    margin-bottom: 24px;
+
+    @media @desktop-s,
+    @tablet-l,
+    @tablet-s,
+    @mobile {
+      padding: 40px;
+    }
+
+    @media (max-width: 973px) {
+      max-width: 676px;
+    }
+
+    @media (max-width: 647px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 352px) {
+      padding: 0;
+    }
+
+    .partner {
+      width: 270px;
+      height: 270px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: @second-font-color;
+      box-shadow: 0px 16px 38px 0 rgba(20, 31, 82, 0.11);
+
+      @media (max-width: 647px) {
+        margin-bottom: 29px;
+      }
+
+      &:not(:nth-child(4n+4)) {
+        margin-right: 28px;
+      }
+
+      &:not(:nth-child(3n+3)) {
+        @media @desktop-s,
+        @tablet-l {
+          margin-right: 28px;
+        }
+      }
+
+      &:not(:nth-child(2n+2)) {
+        @media (max-width: 973px) {
+          margin-right: 28px;
+        }
+      }
+
+      &:nth-child(2n+2) {
+        @media @tablet-s {
+          margin-right: 0;
+        }
+      }
+
+      &:first-child {
+        margin-bottom: 29px;
+      }
+
+      &:nth-child(4) {
+        @media @desktop-s,
+        @tablet-l,
+        @tablet-s {
+          margin-bottom: 29px;
+        }
+      }
+
+      &:nth-child(5) {
+        @media (max-width: 973px) {
+          margin-bottom: 29px;
+        }
+      }
+
+      &:nth-child(odd),
+      &:nth-child(even) {
+        @media (max-width: 647px) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

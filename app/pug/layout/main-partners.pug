@@ -1,0 +1,17 @@
+main.main-partners
+  - 
+    var partners = [
+      'img/mkr_logo-min.png',
+      'img/unesco_logo-min.png',
+      'img/gp_logo-min.png',
+      'img/mtuci_logo-min.png',
+      'img/mkr_logo-min.png',
+      'img/unesco_logo-min.png',
+      'img/gp_logo-min.png',
+      'img/mtuci_logo-min.png'
+    ]
+
+  ul.main-partners__list
+    each partner in partners
+      li.partner
+        img(class='partner__image' src=partner)
